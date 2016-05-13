@@ -1439,3 +1439,57 @@ Started GET "/assets/main.self-6d19c60d8f8195f1a19853c3d58960b773e40dd9ceeb2aed8
 
 
 Started GET "/assets/application.self-da8fe1ed250c12d2f71bd06704981682be4d79430b62091bc3bb0a914b9c7dcc.js?body=1" for ::1 at 2016-05-12 14:17:45 -0700
+
+
+Started GET "/" for ::1 at 2016-05-12 16:32:05 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 594ms (Views: 578.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-12 16:32:06 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.self-6d19c60d8f8195f1a19853c3d58960b773e40dd9ceeb2aed8228854f8287b91e.css?body=1" for ::1 at 2016-05-12 16:32:06 -0700
+
+
+Started GET "/assets/bootstrap.min.self-d481c1ac91d56f8ff6b37158fef109b0db00698c535639decba61b629c3225c7.css?body=1" for ::1 at 2016-05-12 16:32:06 -0700
+
+
+Started GET "/assets/application.self-a7594aacacb9151055bc3ce80d31ab50cbf80be446a47ba8856c8fd39b552bc7.css?body=1" for ::1 at 2016-05-12 16:32:06 -0700
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-05-12 16:32:06 -0700
+
+
+Started GET "/assets/application.self-da8fe1ed250c12d2f71bd06704981682be4d79430b62091bc3bb0a914b9c7dcc.js?body=1" for ::1 at 2016-05-12 16:32:06 -0700
+
+
+Started GET "/" for ::1 at 2016-05-12 16:46:50 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-d481c1ac91d56f8ff6b37158fef109b0db00698c535639decba61b629c3225c7.css?body=1" for ::1 at 2016-05-12 16:46:50 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-12 16:46:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-12 16:46:50 -0700
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-05-12 16:46:50 -0700
+
+
+Started GET "/assets/main.self-6d19c60d8f8195f1a19853c3d58960b773e40dd9ceeb2aed8228854f8287b91e.css?body=1" for ::1 at 2016-05-12 16:46:50 -0700
+
+
+Started GET "/assets/application.self-a7594aacacb9151055bc3ce80d31ab50cbf80be446a47ba8856c8fd39b552bc7.css?body=1" for ::1 at 2016-05-12 16:46:50 -0700
+
+
+Started GET "/assets/application.self-da8fe1ed250c12d2f71bd06704981682be4d79430b62091bc3bb0a914b9c7dcc.js?body=1" for ::1 at 2016-05-12 16:46:50 -0700
