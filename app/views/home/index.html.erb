@@ -1,5 +1,8 @@
 <% if current_user %>
-  <h2> <small>Name: <%= current_user.username %> </small>,you're logged in bro</h2>
+<div class="pad-down">
+    <h4> <small>Name: <%= current_user.username %> </small>,you're logged in bro</h4>
+</div>
+
 <div id="map-canvas">
     <b>Start: </b>
     <select id="start">
