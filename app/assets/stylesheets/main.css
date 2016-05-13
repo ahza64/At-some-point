@@ -6,3 +6,4 @@ body {
 .collapsed, button, navbar-toggle {
   border: none;
 }
+/*fixes map css rule for other divs*/

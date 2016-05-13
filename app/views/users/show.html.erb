@@ -1,7 +1,8 @@
-<div class="container">
+<div class="container pad-down">
   <div class="row">
     <br>
     <div class="col-md-6 col-md-offset-3">
+      <%= image_tag current_user.image, class: "thumbnail img-responsive fix-img" %>
       <%= @user.username %> <br>
       <%= @user.email %> <br>
       <p>
