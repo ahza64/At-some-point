@@ -1,0 +1,16 @@
+https://github.com/Ruhsam/At-some-point.git
+
+Google directions JSON api
+https://developers.google.com/maps/documentation/directions/intro#Introduction
+https://maps.googleapis.com/maps/api/directions/json?origin=225Bush&destination=DESTINATION_HERE&key=
+https://developers.google.com/maps/documentation/distance-matrix/intro#Introduction
+https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=ORIGINS_GO_HERE&destinations=DESTINATIONS_GO_HERE&departure_time=1541202457&traffic_model=best_guess&key=
+https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Vancouver+BC|Seattle&destinations=San+Francisco|Vancouver+BC&mode=bicycling&language=fr-FR&key=
+Google maps javascript api
+https://developers.google.com/maps/documentation/javascript/examples/marker-simple
+https://developers.google.com/maps/documentation/javascript/examples/#basics
+https://developers.google.com/places/javascript/
+https://developers.google.com/maps/documentation/javascript/examples/directions-complex
+Google maps javascript api waypoints
+https://developers.google.com/maps/documentation/javascript/directions#Waypoints
+https://developers.google.com/maps/documentation/javascript/examples/directions-waypoints
