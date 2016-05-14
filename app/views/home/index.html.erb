@@ -106,7 +106,7 @@
             });
           }
           </script>
-      <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAyeeLWYGaKhK_NLAPv8PhniqXASdlnR5M&callback=initMap' %>
+      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['secret_google_key'] %>&callback=initMap"></script>
 
 <% else %>
 
