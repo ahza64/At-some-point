@@ -19,4 +19,7 @@ class SessionsController < ApplicationController
      logout   #see in sessions helper
      redirect_to home_path
    end
+   def testing
+      1+2
+   end
 end
