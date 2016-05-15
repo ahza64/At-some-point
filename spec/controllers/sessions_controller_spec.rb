@@ -8,20 +8,24 @@ RSpec.describe SessionsController, type: :controller do
          expect(response).to render_template(:new)
        end
      end
+
    describe "#create" do
       it "verifies the user information and logs in user"
-
    end
+      it "redirects to user profile if login is successful"
+   end
+      it "redirects to home page if login is not successful"
+   end
+
    describe "#destroy" do
       it "logs user out, ends user session"
    end
+
    describe "#testing" do
        it "tests rspec setup in controller" do
          # item = Item.create({size:'s', color:'blue', status:'unsold'})
          # get :testing, id: item.id
-         calc = Sessions.testing
-         tester = calc.testing
-         tester.should eq(3)
+         expect(session.testing?).to be true
        end
     end
 
