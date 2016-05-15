@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-<<<<<<< HEAD
    def new
      @user = User.new
      render :new
