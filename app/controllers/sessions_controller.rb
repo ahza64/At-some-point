@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
    def new
      @user = User.new
      render :new
+     flash[:notice] = "Welcome to the @SomePoint Community!"
    end
 
    def create
@@ -10,6 +11,7 @@ class SessionsController < ApplicationController
      if @user
        login(@user)
        redirect_to @user
+       flash[:notice] = "You did it! You logged in!"
      else
        redirect_to home_path
      end
@@ -17,6 +19,7 @@ class SessionsController < ApplicationController
 
    def destroy    #destroy user login
      logout   #see in sessions helper
+     flash[:notice] = "Successfully logged out."
      redirect_to home_path
    end
    def testing
