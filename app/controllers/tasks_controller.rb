@@ -15,7 +15,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.create(task_params)
     @user = current_user
-    @user.tasks.unshift(@task)
+    @user.tasks << @task
 
     redirect_to user_path(@user)
   end
@@ -55,7 +55,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:tasks).permit(:name, :location)
+    params.require(:task).permit(:name, :location)
   end
 
 end
