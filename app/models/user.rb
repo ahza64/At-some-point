@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  validates :username, presence: true
+  validates :username, presence: true, uniqueness: true
   validates :location, presence: true
   VALID_EMAIL_REGEX = /\w+@[^\.]+\.\w+/
   validates :email,
@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
             format:     { with: VALID_EMAIL_REGEX },
             uniqueness: true,
             length:     { maximum: 255 }
-  validates :password_digest, presence: true, length: { minimum: 8 }
+  validates :password, presence: true, length: { minimum: 8 }
 
   has_secure_password
   has_many :tasks
