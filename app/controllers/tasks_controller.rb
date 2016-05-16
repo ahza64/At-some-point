@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+
   def new
     @task = Task.new
     @user = User.find(params[:user_id])
@@ -6,6 +7,7 @@ class TasksController < ApplicationController
       render :new
     else
       #flash see john
+
       redirect_to home_path #change to login page when we make it see jon
     end
   end
@@ -13,7 +15,8 @@ class TasksController < ApplicationController
   def create
     @task = Task.create(task_params)
     @user = current_user
-    @user.task.unshift(@task)
+    @user.tasks.unshift(@task)
+
     redirect_to user_path(@user)
   end
 
@@ -24,7 +27,7 @@ class TasksController < ApplicationController
       render :edit
     else
       # flash see john
-      redirect_to home_path
+      redirect_to home_path #update to login see Jon
     end
   end
 
@@ -39,7 +42,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:task_id])
     @user = @task.user
     if current_user == @user
-      @user.task.destroy(@task)
+      @user.tasks.destroy(@task)
       #flash see john
       redirect_to @user
     else
@@ -52,6 +55,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :location)
+    params.require(:tasks).permit(:name, :location)
   end
+
 end
