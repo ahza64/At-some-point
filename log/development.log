@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
   [1m[36m (0.9ms)[0m  [1mDROP DATABASE IF EXISTS "my_database_development"[0m
   [1m[35m (0.1ms)[0m  DROP DATABASE IF EXISTS "my_database_development"
   [1m[36m (341.4ms)[0m  [1mCREATE DATABASE "my_database_development" ENCODING = 'utf8'[0m
@@ -2978,3 +2980,4 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+>>>>>>> 4f2f16570447bca7db195b250fb924e4b5f47220
