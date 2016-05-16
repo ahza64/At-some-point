@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
-
+  get "/about", to: "about_us#index"
 end

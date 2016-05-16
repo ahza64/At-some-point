@@ -6,3 +6,24 @@ body {
 .collapsed, button, navbar-toggle {
   border: none;
 }
+.head{
+  text-align: center;
+}
+.aboutUsPic{
+  width: 75%;
+  border: 5px solid black;
+  border-radius: 25px;
+  margin-left: 13%
+}
+.bio{
+  text-align: center;
+}
+.name{
+  text-align: center;
+}
+.aboutApp{
+  text-align: center;
+}
+.sponsors{
+  width: 25%;
+}
