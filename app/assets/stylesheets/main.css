@@ -79,3 +79,16 @@
 .pad-down {
   padding-top: 45px;
 }
+.profilePic{
+  width: 100%;
+}
+.task{
+  background-color: dimgrey;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.flash{
+  padding-top: 75px;
+  width: 33%;
+  margin: 0 auto;
+}
