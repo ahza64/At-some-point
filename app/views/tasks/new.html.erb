@@ -1,8 +1,12 @@
-<br>
-<div class="container pad-down">
-    <%= simple_form_for :task, url: user_tasks_path(@user), method: "post" do |f| %>
-    <%= f.input :name, placeholder: 'example: pick up the kids' %>
-    <%= f.input :location, inline_label: 'Enter Valid Address' %>
-    <%= f.button :submit %>
-  <% end %>
-</div>
+<% if @user == current_user %>
+  <br>
+  <div class="container pad-down">
+      <%= simple_form_for :task, url: user_tasks_path(@user), method: "post" do |f| %>
+      <%= f.input :name, placeholder: 'example: pick up the kids' %>
+      <%= f.input :location, inline_label: 'Enter Valid Address' %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+<% else %>
+  <h1 class="denied"> <%= current_user.username %> is not authorized to view this page. </h1>
+<% end %>
