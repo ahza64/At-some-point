@@ -27702,3 +27702,495 @@ Processing by HomeController#index as HTML
   [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 1]]
   Rendered home/index.html.erb within layouts/application (2.5ms)
 Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2016-05-17 14:51:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 359ms (Views: 297.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/main.self-6d9f8a3d7af141dec62f6092c5933c651ce5af4191d8fa8b2c9baa9989c8217a.css?body=1" for 127.0.0.1 at 2016-05-17 14:51:08 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-17 14:51:08 -0700
+
+
+Started GET "/assets/application.self-f024a25089e758ab89abef4161f50dc11e05168e0385b4ff9e30caf995c362ff.css?body=1" for 127.0.0.1 at 2016-05-17 14:51:08 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-17 14:51:08 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-17 14:51:08 -0700
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 127.0.0.1 at 2016-05-17 14:51:08 -0700
+
+
+Started GET "/assets/bootstrap.min.self-088b177ea252d82467e80a53c5ff67a13ddf419f95c5eaf48b882ae91e826ec2.css?body=1" for 127.0.0.1 at 2016-05-17 14:51:08 -0700
+
+
+Started GET "/assets/application.self-da8fe1ed250c12d2f71bd06704981682be4d79430b62091bc3bb0a914b9c7dcc.js?body=1" for 127.0.0.1 at 2016-05-17 14:51:08 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-17 14:51:12 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 1]]
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-05-17 14:51:15 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-17 14:51:15 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-05-17 14:51:18 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (63.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 85ms (Views: 82.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-05-17 14:51:56 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X5wiK/5OeZq2XBYAa1SMrfDTLqadsfwepEsCrs0MbQEETM5bWxbR6No2m7/zHh+TK8YqSwZO7pE2aVdvpEWGzA==", "user"=>{"username"=>"Matt_damond", "email"=>"matt_damond123@me.com", "image"=>"https://s-media-cache-ak0.pinimg.com/736x/36/69/39/36693999b6e24b1d06d0ee21c9ae320d.jpg", "location"=>"matt@benaflac.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (12.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'Matt_damond' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'matt_damond123@me.com' LIMIT 1[0m
+  [1m[35mSQL (7.1ms)[0m  INSERT INTO "users" ("username", "email", "password_digest", "location", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["username", "Matt_damond"], ["email", "matt_damond123@me.com"], ["password_digest", "$2a$10$TJZaveKJ7c708rQLZAPiOOA40zxyfy9rJ.AjkTI3iSca6OWTpiABW"], ["location", "matt@benaflac.com"], ["image", "https://s-media-cache-ak0.pinimg.com/736x/36/69/39/36693999b6e24b1d06d0ee21c9ae320d.jpg"], ["created_at", "2016-05-17 21:51:56.871529"], ["updated_at", "2016-05-17 21:51:56.871529"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'Matt_damond' AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'matt_damond123@me.com' AND "users"."id" != 3) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 124ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:51:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3/tasks/new" for 127.0.0.1 at 2016-05-17 14:52:00 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered tasks/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/3/tasks" for 127.0.0.1 at 2016-05-17 14:52:19 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t/7hs6TI3Qo6Gql+4TVHN0d+poWnSA2nzDnCwC4xDQPsLg3DAZB1eFZwJMF5f9QJnGuiaDy3HyheG5cBR3jmzg==", "task"=>{"name"=>"talk to obama", "location"=>"white house"}, "commit"=>"Save Task", "user_id"=>"3"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tasks" ("name", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "talk to obama"], ["location", "white house"], ["created_at", "2016-05-17 21:52:19.285803"], ["updated_at", "2016-05-17 21:52:19.285803"]]
+  [1m[36m (4.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "tasks" SET "user_id" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["user_id", 3], ["updated_at", "2016-05-17 21:52:19.294457"], ["id", 17]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 15ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:52:19 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3/tasks/new" for 127.0.0.1 at 2016-05-17 14:52:23 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered tasks/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/3/tasks" for 127.0.0.1 at 2016-05-17 14:52:33 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JZA7EpAkozgC1LAfJXv4Bf3asjf3Wul7Rv9GlS3wKfV+QNdiNXwLSm6+PaC9MWs7Js+22myl+/TU3RNURLnCOA==", "task"=>{"name"=>"bark up a tree", "location"=>"central park"}, "commit"=>"Save Task", "user_id"=>"3"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("name", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "bark up a tree"], ["location", "central park"], ["created_at", "2016-05-17 21:52:33.929108"], ["updated_at", "2016-05-17 21:52:33.929108"]]
+  [1m[36m (5.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tasks" SET "user_id" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["user_id", 3], ["updated_at", "2016-05-17 21:52:33.938346"], ["id", 18]]
+  [1m[36m (4.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 18ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:52:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3/tasks/new" for 127.0.0.1 at 2016-05-17 14:52:35 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered tasks/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/3/tasks" for 127.0.0.1 at 2016-05-17 14:52:47 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2eqwKeAgAFW777+hLopxyGb7oLRKNu1ZNdXsmoCsxoSCOlxZRXioJ9eFMh62wOL2ve6kWdHJ/9an97lb6eUtSQ==", "task"=>{"name"=>"eat cheese", "location"=>"paris"}, "commit"=>"Save Task", "user_id"=>"3"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("name", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "eat cheese"], ["location", "paris"], ["created_at", "2016-05-17 21:52:47.655364"], ["updated_at", "2016-05-17 21:52:47.655364"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tasks" SET "user_id" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["user_id", 3], ["updated_at", "2016-05-17 21:52:47.673360"], ["id", 19]]
+  [1m[36m (4.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 26ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:52:47 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/3/tasks/17" for 127.0.0.1 at 2016-05-17 14:52:50 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FjPAMTT6VCxhcoEnbRYBRhSTM0LAQzowxFEYIgXdP5NN4yxBkaL8Xg0YDJj1XJJ4z4Y3r1u8KL9Wc03jbJTUXg==", "user_id"=>"3", "id"=>"17"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 17]]
+  [1m[35m (5.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 13ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:52:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/tasks/18/edit" for 127.0.0.1 at 2016-05-17 14:52:53 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"authenticity_token"=>"s1uwCokzN4jc7MZBOsjmWBGCIlvFZkN5SrAJDQN+gwHoi1x6LGuf+rCGS/6ignVmypcmtl6ZUfbYklzMajdozA==", "user_id"=>"3", "id"=>"18"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered tasks/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/3/tasks/18" for 127.0.0.1 at 2016-05-17 14:52:56 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9ojf+gQwm0PzhNPE5Z/7mIhLf/PkyB0ADfTLBHkl3I4Cs8PTUhqH2OknvCL3OzQuTQpElRsMvuSFYbteK18vw==", "task"=>{"name"=>"bark up a tree at a cat", "location"=>"central park"}, "commit"=>"Save Task", "user_id"=>"3", "id"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "tasks" SET "name" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["name", "bark up a tree at a cat"], ["updated_at", "2016-05-17 21:52:56.678212"], ["id", 18]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 10ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:52:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-17 14:52:58 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:53:04 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3/tasks/new" for 127.0.0.1 at 2016-05-17 14:53:06 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered tasks/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/3/tasks" for 127.0.0.1 at 2016-05-17 14:53:18 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3xwpc1om/4xtoLpO3+Use5pXqmet3A5d3XZYEt44dQ2EzMUD/35X/gHKN/FHr79FQUKuijYjHNJPVA3Tt3GewA==", "task"=>{"name"=>"woot", "location"=>"las vegas"}, "commit"=>"Save Task", "user_id"=>"3"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tasks" ("name", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "woot"], ["location", "las vegas"], ["created_at", "2016-05-17 21:53:18.652517"], ["updated_at", "2016-05-17 21:53:18.652517"]]
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "tasks" SET "user_id" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["user_id", 3], ["updated_at", "2016-05-17 21:53:18.662138"], ["id", 20]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 13ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:53:18 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-17 14:53:21 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:53:31 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3/tasks/19/edit" for 127.0.0.1 at 2016-05-17 14:53:33 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"authenticity_token"=>"TFdzEY5frFHD+w+ikJfV6hF1GxVJd5QZH2X3y7SqGOoXh59hKwcEI6+Rgh0I3UbUymAf+NKIhpaNR6IK3ePzJw==", "user_id"=>"3", "id"=>"19"}
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered tasks/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/3/tasks/19" for 127.0.0.1 at 2016-05-17 14:53:49 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sxhr6g+kOI26DgBgVOK2yqMEdGRt8YKtnlTsaLW+E4noyIeaqvyQ/9Zkjd/MqCX0eBFwifYOkCIMdrmp3Pf4RA==", "task"=>{"name"=>"eat cheese", "location"=>"madison"}, "commit"=>"Save Task", "user_id"=>"3", "id"=>"19"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "tasks" SET "location" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["location", "madison"], ["updated_at", "2016-05-17 21:53:49.340167"], ["id", 19]]
+  [1m[35m (5.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 10ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:53:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-17 14:53:50 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:54:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3/tasks/new" for 127.0.0.1 at 2016-05-17 14:54:36 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered tasks/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/3/tasks" for 127.0.0.1 at 2016-05-17 14:54:44 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sVkNl8ug0MXVtI/brGgISu5EDxhKr4BPIlOi86rSMWLqieHnbvh4t7neAmQ0Ipt0NVEL9dFQksCwcfcyw5varw==", "task"=>{"name"=>"home", "location"=>"chicago"}, "commit"=>"Save Task", "user_id"=>"3"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("name", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "home"], ["location", "chicago"], ["created_at", "2016-05-17 21:54:44.249849"], ["updated_at", "2016-05-17 21:54:44.249849"]]
+  [1m[36m (5.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tasks" SET "user_id" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["user_id", 3], ["updated_at", "2016-05-17 21:54:44.258531"], ["id", 21]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 13ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:54:44 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/3/tasks/new" for 127.0.0.1 at 2016-05-17 14:54:45 -0700
+Processing by TasksController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered tasks/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/3/tasks" for 127.0.0.1 at 2016-05-17 14:54:52 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ZbfmaEU1HzhNj08SklWb7/MnJ6NYfmtx1QoNZvtevqORjPpBEx8Do1csIPSA8VRZNmYcxae6yJVdn308qSRNw==", "task"=>{"name"=>"store", "location"=>"mexico city"}, "commit"=>"Save Task", "user_id"=>"3"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tasks" ("name", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["name", "store"], ["location", "mexico city"], ["created_at", "2016-05-17 21:54:52.458313"], ["updated_at", "2016-05-17 21:54:52.458313"]]
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tasks" SET "user_id" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3  [["user_id", 3], ["updated_at", "2016-05-17 21:54:52.467916"], ["id", 22]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 13ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2016-05-17 14:54:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-17 14:54:55 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 3]]
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.1.7.71 at 2016-05-17 14:56:17 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 1]]
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/main.self-6d9f8a3d7af141dec62f6092c5933c651ce5af4191d8fa8b2c9baa9989c8217a.css?body=1" for 10.1.7.71 at 2016-05-17 14:56:17 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-088b177ea252d82467e80a53c5ff67a13ddf419f95c5eaf48b882ae91e826ec2.css?body=1" for 10.1.7.71 at 2016-05-17 14:56:17 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.1.7.71 at 2016-05-17 14:56:17 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f024a25089e758ab89abef4161f50dc11e05168e0385b4ff9e30caf995c362ff.css?body=1" for 10.1.7.71 at 2016-05-17 14:56:17 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.1.7.71 at 2016-05-17 14:56:17 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-da8fe1ed250c12d2f71bd06704981682be4d79430b62091bc3bb0a914b9c7dcc.js?body=1" for 10.1.7.71 at 2016-05-17 14:56:17 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for 10.1.7.71 at 2016-05-17 14:56:17 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.1.7.71 at 2016-05-17 14:56:17 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/1" for 10.1.7.71 at 2016-05-17 14:56:24 -0700
+Cannot render console from 10.1.7.71! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.5ms)
