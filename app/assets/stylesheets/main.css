@@ -73,6 +73,10 @@
 .newGo{
   width: 50%;
 }
+.denied{
+  text-align: center;
+  margin-top: 10%;
+}
 @media (max-width: 990px) {
   .userInfo{
     text-align: center;
@@ -119,6 +123,10 @@ body {
   min-height: 100%;
 }
 
+.whole-page {
+  min-height: 100%;
+  margin-top: 3%;
+}
 
 /* Custom page CSS
 -------------------------------------------------- */

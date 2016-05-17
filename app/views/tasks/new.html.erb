@@ -8,5 +8,5 @@
     <% end %>
   </div>
 <% else %>
-  <h1> You are not authorized to view this page </h1>
+  <h1 class="denied"> <%= current_user.username %> is not authorized to view this page. </h1>
 <% end %>
