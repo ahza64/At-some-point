@@ -71,27 +71,32 @@ RSpec.describe UsersController, type: :controller do
 
 
 
-############################### need help with show TDD ##############
+   ############################### need help with show TDD##############
    describe "#show" do
-      let(:guy) {User.new(username:"guy", email:"guy@test.com", location:"sf", password:"guytests")}
-      let(:bob) {User.new(username:"bob", email:"bob@test.com", location:"sf", password:"bobtests")}
+      let(:guy) {User.create(username:"guy", email:"guy@test.com", location:"sf", password:"guytests")}
+      let(:bob) {User.create(username:"bob", email:"bob@test.com", location:"sf", password:"bobtests")}
 
       let(:signed_in_user) {:bob}
 
-    before do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(signed_in_user)
-    end
+      before do
+         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(signed_in_user)
+      end
 
-       it "should show profile when logged in" do
-       get :show, id: bob.id
-       expect(response).to render_template(:show)
-       end
+      it "should show profile when logged in" do
+         get :show, id:bob.id
+         expect(response).to render_template(:show)
+      end
 
-       it "should not show other users profile when logged" do
-       end
+      it "should not show other users profile when logged" do
+         get :show, id:guy.id
+         expect(response).to_not render_template(:show)
+      end
 
-       it "should reroute to signup page when not logged in" do
-       end
+      it "should not see user profile when logged out" do
+         signed_in_user=nil
+         get :show, id:guy.id
+         expect(response).to_not render_template(:show)
+      end
 
    end
 end
