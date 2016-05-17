@@ -5818,6 +5818,7 @@ Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d6
 Started GET "/assets/application.self-da8fe1ed250c12d2f71bd06704981682be4d79430b62091bc3bb0a914b9c7dcc.js?body=1" for ::1 at 2016-05-16 16:41:14 -0700
 =======
 Started GET "/assets/application.self-da8fe1ed250c12d2f71bd06704981682be4d79430b62091bc3bb0a914b9c7dcc.js?body=1" for ::1 at 2016-05-16 14:05:47 -0700
+<<<<<<< HEAD
 >>>>>>> jr
 =======
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -6264,6 +6265,23 @@ SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
   actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
   actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
   actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+=======
+
+
+Started GET "/logout" for ::1 at 2016-05-16 18:28:14 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate - Missing template sessions/destroy, application/destroy with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Mashur/wdi/At-some-point/app/views"
+:
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+>>>>>>> jr
   actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
   actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
   actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
@@ -6275,14 +6293,23 @@ SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
   actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
   activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /Users/Paul/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+=======
+  /Users/Mashur/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+>>>>>>> jr
   activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
   actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
   activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
   actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+<<<<<<< HEAD
   app/controllers/users_controller.rb:16:in `show'
   actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+=======
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+>>>>>>> jr
   actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
   actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
   actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
@@ -6354,6 +6381,7 @@ SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
   rack (1.6.4) lib/rack/lock.rb:17:in `call'
   rack (1.6.4) lib/rack/content_length.rb:15:in `call'
   rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+<<<<<<< HEAD
   /Users/Paul/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
   /Users/Paul/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
   /Users/Paul/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
@@ -6387,6 +6415,30 @@ NoMethodError - undefined method `each' for nil:NilClass:
   actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
   actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
   actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:14:in `render'
+=======
+  /Users/Mashur/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/Mashur/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/Mashur/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/7d89851dabef2219/variables" for ::1 at 2016-05-16 18:28:14 -0700
+
+
+Started GET "/logout" for ::1 at 2016-05-16 18:29:39 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate - Missing template sessions/destroy, application/destroy with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Mashur/wdi/At-some-point/app/views"
+:
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+>>>>>>> jr
   actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
   actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
   actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
@@ -6398,14 +6450,23 @@ NoMethodError - undefined method `each' for nil:NilClass:
   actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
   actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
   activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+<<<<<<< HEAD
   /Users/Paul/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+=======
+  /Users/Mashur/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+>>>>>>> jr
   activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
   actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
   actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
   activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
   actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+<<<<<<< HEAD
   app/controllers/users_controller.rb:16:in `show'
   actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+=======
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+>>>>>>> jr
   actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
   actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
   actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
@@ -6477,6 +6538,7 @@ NoMethodError - undefined method `each' for nil:NilClass:
   rack (1.6.4) lib/rack/lock.rb:17:in `call'
   rack (1.6.4) lib/rack/content_length.rb:15:in `call'
   rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+<<<<<<< HEAD
   /Users/Paul/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
   /Users/Paul/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
   /Users/Paul/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
@@ -27473,11 +27535,131 @@ Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/logout" for ::1 at 2016-05-17 13:52:51 -0700
+=======
+  /Users/Mashur/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/Mashur/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/Mashur/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/7c788835ac12be0e/variables" for ::1 at 2016-05-16 18:29:39 -0700
+
+
+Started GET "/logout" for ::1 at 2016-05-16 18:32:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-16 18:32:02 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered home/index.html.erb within layouts/application (17.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 219ms (Views: 216.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap.min.self-d481c1ac91d56f8ff6b37158fef109b0db00698c535639decba61b629c3225c7.css?body=1" for ::1 at 2016-05-16 18:32:03 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-16 18:32:03 -0700
+
+
+Started GET "/assets/main.self-f4967798f45e2187bd0143c23f9b7c468c463483617dd65e7477dfe25034fb52.css?body=1" for ::1 at 2016-05-16 18:32:03 -0700
+
+
+Started GET "/assets/application.self-f024a25089e758ab89abef4161f50dc11e05168e0385b4ff9e30caf995c362ff.css?body=1" for ::1 at 2016-05-16 18:32:03 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-16 18:32:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-16 18:32:03 -0700
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-05-16 18:32:03 -0700
+
+
+Started GET "/assets/application.self-da8fe1ed250c12d2f71bd06704981682be4d79430b62091bc3bb0a914b9c7dcc.js?body=1" for ::1 at 2016-05-16 18:32:03 -0700
+
+
+Started GET "/users/new" for ::1 at 2016-05-16 18:32:55 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (38.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 62ms (Views: 55.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users" for ::1 at 2016-05-16 18:33:13 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NJMil4xjTSPzXbFNbgzbLFeOL+zwmC83lMpVfGOJau+bS7VoyvPm4gyPA+a34Zsw1o+TOX3E9dsDDPum4eEGiw==", "user"=>{"username"=>"brandon", "email"=>"otoole@gmail.com", "image"=>"", "location"=>"sf", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'brandon' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'otoole@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "email", "password_digest", "location", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["username", "brandon"], ["email", "otoole@gmail.com"], ["password_digest", "$2a$10$2WBQ237AjVecU8QyMHG5..dzlqJcQBxeC7v6iIxRpjhRpeYekmsk6"], ["location", "sf"], ["image", ""], ["created_at", "2016-05-17 01:33:13.125798"], ["updated_at", "2016-05-17 01:33:13.125798"]]
+  [1m[36m (6.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'brandon' AND "users"."id" != 7) LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'otoole@gmail.com' AND "users"."id" != 7) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 90ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/users/7" for ::1 at 2016-05-16 18:33:13 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/7" for ::1 at 2016-05-16 18:33:15 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/7" for ::1 at 2016-05-16 18:33:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-05-16 18:33:19 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/7" for ::1 at 2016-05-16 18:33:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for ::1 at 2016-05-16 18:33:24 -0700
+>>>>>>> jr
 Processing by SessionsController#destroy as HTML
 Redirected to http://localhost:3000/
 Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for ::1 at 2016-05-17 13:52:51 -0700
 Processing by HomeController#index as HTML
   [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
@@ -28194,3 +28376,122 @@ Processing by UsersController#show as HTML
   [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 1]]
   Rendered users/show.html.erb within layouts/application (2.4ms)
 Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/" for ::1 at 2016-05-16 18:33:24 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-16 18:33:33 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"29kJ+1f2xvE8nZiUHln31zynE0TYC65wyXqohLzqbHx0AZ4EEWZtMMNPKj/HtLfLvaavkVVXdJxevAZePoIAGA==", "user"=>{"email"=>"otoole@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "otoole@gmail.com"]]
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 69ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/7" for ::1 at 2016-05-16 18:33:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for ::1 at 2016-05-16 19:13:19 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-16 19:13:19 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (6.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+<<<<<<< HEAD
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/sessions" for ::1 at 2016-05-16 19:13:32 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pQK85Ejcul2g2lV2m+JeccDKaDOeW0CFOo5mTUIzr3AK2isbDkwRnF8I591CDx5tQcvU5hMHmmmtSMiXwFvDFA==", "user"=>{"email"=>"test@test.org", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "test@test.org"]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 76ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/2" for ::1 at 2016-05-16 19:13:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-17 07:16:08 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered home/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 61ms (Views: 54.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-17 08:58:19 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-17 09:05:21 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "bob"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "bob"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."username" = 'guy' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'guy@test.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("username", "email", "location", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "guy"], ["email", "guy@test.com"], ["location", "sf"], ["password_digest", "$2a$10$mb.LSA4djSdxMD4PESJBs.E4.j9lrlKlz3exjwG6tFeqlm70PYoSy"], ["created_at", "2016-05-17 21:55:37.629001"], ["updated_at", "2016-05-17 21:55:37.629001"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 52]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 52]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 52]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+>>>>>>> jr
+=======
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+<<<<<<< HEAD
+
+
+Started POST "/sessions" for ::1 at 2016-05-17 13:58:56 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6VLqRtXEYiittNFqhP4s2LAH6cxc82hPLRRYYCJkvrI8Tx2ku9A67eVEpFaoXZ/cepi6V4/mye49yOBLpgJocg==", "user"=>{"email"=>"jortiz@tunein.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "jortiz@tunein.com"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 69ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for ::1 at 2016-05-17 13:58:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+=======
+>>>>>>> origin/style_branch
+>>>>>>> bdeeec1774a6e22c8cfde76ddde43658ae9c8753
+>>>>>>> style_branch
