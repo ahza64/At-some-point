@@ -7,14 +7,16 @@ class TasksController < ApplicationController
       render :new
     else
       #flash see john
-      redirect_to home_path #change to login page when we make it see Jon
+
+      redirect_to home_path #change to login page when we make it see jon
     end
   end
 
   def create
     @task = Task.create(task_params)
     @user = current_user
-    @user.tasks.unshift(@task)
+    @user.tasks << @task
+
     redirect_to user_path(@user)
   end
 
@@ -45,11 +47,13 @@ class TasksController < ApplicationController
       redirect_to @user
     else
       #flash see john
-      redirect_to home_path #update to login see Jon
+      redirect_to home_path
     end
   end
 
+
   private
+
   def task_params
     params.require(:task).permit(:name, :location)
   end
