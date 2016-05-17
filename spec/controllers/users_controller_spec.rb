@@ -1,0 +1,97 @@
+require 'rails_helper'
+
+RSpec.describe UsersController, type: :controller do
+   describe "#new" do
+      it "should render new" do
+         get :new
+         expect(response).to render_template(:new)
+      end
+   end
+
+   describe "#create" do
+      it "should make a user" do
+         post :create, user:{email:"bob@test.com", username:"bob", location:"sf", password:"bobtests"}
+         user = User.find_by(username:"bob")
+         expect(user).not_to be_nil
+         expect(response).to redirect_to user_path(user)
+      end
+      it "should not make a user when email is missing" do
+         post :create, user:{email:"", username:"bob", location:"sf", password:"bobtests"}
+         user = User.find_by(username:"bob")
+         expect(user).to be_nil
+         expect(response).to render_template(:new)
+      end
+      it "should not make a user when email is missing" do
+         post :create, user:{username:"bob", location:"sf", password:"bobtests"}
+         user = User.find_by(username:"bob")
+         expect(user).to be_nil
+         expect(response).to render_template(:new)
+      end
+      it "should not make a user when username is missing" do
+         expect(User.find_by(username:"bob")).to be_nil
+         post :create, user:{email:"bob@test.com", username:"", location:"sf", password:"bobtests"}
+         expect(User.find_by(username:"bob")).to be_nil
+         expect(User.find_by(email:"bob@test.com")).to be_nil
+         expect(response).to render_template(:new)
+      end
+      it "should not make a user when username is missing" do
+         post :create, user:{email:"bob@test.com", location:"sf", password:"bobtests"}
+         user = User.find_by(username:"bob")
+         user = User.find_by(email:"bob@test.com")
+         expect(user).to be_nil
+         expect(response).to render_template(:new)
+      end
+      it "should not make a user when location is missing" do
+         post :create, user:{email:"bob@test.com", username:"bob", location:"", password:"bobtests"}
+         user = User.find_by(username:"bob")
+         expect(user).to be_nil
+         expect(response).to render_template(:new)
+      end
+      it "should not make a user when location is missing" do
+         post :create, user:{email:"bob@test.com", username:"bob", password:"bobtests"}
+         user = User.find_by(username:"bob")
+         expect(user).to be_nil
+         expect(response).to render_template(:new)
+      end
+      it "should not make a user when password is missing" do
+         post :create, user:{email:"bob@test.com", username:"bob", location:"sf", password:""}
+         user = User.find_by(username:"bob")
+         expect(user).to be_nil
+         expect(response).to render_template(:new)
+      end
+      it "should not make a user when password is missing" do
+         post :create, user:{email:"bob@test.com", username:"bob", location:"sf"}
+         user = User.find_by(username:"bob")
+         expect(user).to be_nil
+         expect(response).to render_template(:new)
+      end
+   end
+
+
+
+
+
+############################### need help with show TDD ##############
+   describe "#show" do
+      let(:guy) {User.new(username:"guy", email:"guy@test.com", location:"sf", password:"guytests")}
+      let(:bob) {User.new(username:"bob", email:"bob@test.com", location:"sf", password:"bobtests")}
+
+      let(:signed_in_user) {:bob}
+
+    before do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(signed_in_user)
+    end
+
+       it "should show profile when logged in" do
+       get :show, id: bob.id
+       expect(response).to render_template(:show)
+       end
+
+       it "should not show other users profile when logged" do
+       end
+
+       it "should reroute to signup page when not logged in" do
+       end
+
+   end
+end
