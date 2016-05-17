@@ -21,7 +21,7 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:task_id])
+    @task = Task.find(params[:id])
     @user = @task.user
     if current_user == @user
       render :edit
@@ -32,14 +32,15 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = Task.find(params[:task_id])
+    @user = User.find(params[:user_id])
+    @task = Task.find(params[:id])
     @task.update(task_params)
     #flash see john
     redirect_to @user
   end
 
   def destroy
-    @task = Task.find(params[:task_id])
+    @task = Task.find(params[:id])
     @user = @task.user
     if current_user == @user
       @user.tasks.destroy(@task)
