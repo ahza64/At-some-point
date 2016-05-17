@@ -44,12 +44,9 @@
 }
 /*fixes map css rule for other divs*/
 .profilePic{
+  max-width: 300px;
   width: 100%;
-}
-.task{
-  background-color: dimgrey;
-  border: 2px solid black;
-  border-radius: 15px;
+  margin: auto;
 }
 .flash{
   padding-top: 55px;
@@ -58,6 +55,37 @@
 }
 .newTask{
   float: right;
+  width: 100px;
+}
+.tasksShow{
+  margin: 0 auto;
+  width: 90%;
+}
+.editDelete{
+  width: 75px;
+}
+.taskLoc{
+  text-align: right;
+}
+.newGo{
+  width: 50%;
+}
+@media (max-width: 990px) {
+  .userInfo{
+    text-align: center;
+  }
+  .goBtn{
+    float: right;
+  }
+  .taskBtn{
+    float: left;
+  }
+}
+@media (max-width: 767px) {
+
+  .taskLoc{
+    text-align: left;
+  }
 }
 
 /* Sticky footer styles
