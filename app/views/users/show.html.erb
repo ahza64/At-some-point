@@ -28,13 +28,13 @@
               <h3 class="taskLoc"><%= task.location %></h3>
             </div>
         </div>
-        <div class="panel-footer">
-          <%= link_to "Edit", "/", class: "btn btn-warning editDelete" %><%= link_to "Delete", "/", class: "btn btn-danger editDelete" %>
+        <div class="panel-footer buttons">
+          <%= link_to "Edit", edit_user_task_path(@user, task), :method => :get, class: "btn btn-warning editDelete" %><%= link_to "Delete", user_task_path(@user, task), :method => :delete, class: "btn btn-danger editDelete" %>
         </div>
         <hr>
         <% end %>
     </div>
   </div>
   <% else %>
-    <h1> You are not authorized to view this page </h1>
+    <h1 class="denied"> <%= current_user.username %> is not authorized to view this page. </h1>
   <% end %>

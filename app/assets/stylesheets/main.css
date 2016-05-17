@@ -50,8 +50,11 @@
 }
 .flash{
   padding-top: 55px;
+  position: fixed;
+  z-index: 999;
   width: 33%;
   margin: 0 auto;
+  margin-left: 33%;
 }
 .newTask{
   float: right;
@@ -69,6 +72,10 @@
 }
 .newGo{
   width: 50%;
+}
+.denied{
+  text-align: center;
+  margin-top: 10%;
 }
 @media (max-width: 990px) {
   .userInfo{
