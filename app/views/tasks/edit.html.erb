@@ -1,9 +1,13 @@
+<% if @user == current_user %>
 <br>
-<h1>LETS EDIT SOME SHIT!</h1>
+<h1>LETS EDIT!</h1>
 <div class="container pad-down">
-    <%= simple_form_for :task, url: user_tasks_path(@user), method: "post" do |f| %>
+    <%= simple_form_for :task, url: user_task_path(@user,@task), method: "patch" do |f| %>
     <%= f.input :name, placeholder: 'example: pick up the kids' %>
     <%= f.input :location, inline_label: 'Enter Valid Address' %>
     <%= f.button :submit %>
   <% end %>
 </div>
+<% else %>
+  <h1> You are not authorized to view this page </h1>
+<% end %>

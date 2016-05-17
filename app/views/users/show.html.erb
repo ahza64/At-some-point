@@ -1,30 +1,40 @@
-
-<div class="container pad-down">
-  <div class="row">
-    <br>
-    <div class="col-md-2 col-md-offset-3">
-      <%= image_tag current_user.image, class: "profilePic img-responsive fix-img thumbnail" %>
-    </div>
-    <div class="col-md-3">
-      <h1><%= @user.username %></h1> <br>
-      <h2><%= @user.email %></h2> <br>
-      <p>
-        Joined On: <%= @user.created_at.strftime("%b %d, %Y") %>
-      </p>
-    </div>
-
-  </div>
-  <div class="row">
-    <%= link_to "GO", "/", class: "btn btn-success newTask" %>
-    <%= link_to "New Task", new_user_task_path(@user), class: "btn btn-info newTask" %>
-  </div>
-  <div class="row">
-    <% @tasks.each do |task|  %>
-      <div class="task">
-        <h2><%= task.name %></p>
-        <p><%= task.location %></p>
-        <p> Created <%= time_ago_in_words (task.created_at) %> ago.</p>
+<% if @user == current_user %>
+  <div class="container pad-down">
+    <div class="row">
+      <br>
+      <div class="col-md-2 col-md-offset-3">
+        <%= image_tag current_user.image, class: "profilePic img-responsive fix-img thumbnail" %>
       </div>
-    <% end %>
+      <div class="col-md-3">
+        <h1 class="userInfo"><%= @user.username %></h1>
+        <h2 class="userInfo"><%= @user.email %></h2>
+        <p class="userInfo">Joined On: <%= @user.created_at.strftime("%b %d, %Y") %></p>
+        <hr>
+        <hr>
+      </div>
+
+    </div>
+    <div class="tasksShow">
+      <div class="row">
+        <%= link_to "GO!", "/", class: "btn btn-success newTask goBtn" %>
+        <%= link_to "New Task", new_user_task_path(@user), class: "btn btn-info newTask taskBtn" %>
+      </div>
+        <% @tasks.each do |task|  %>
+        <div class="row panel-body">
+            <div class="col-sm-5">
+              <h2 class="taskName"><%= task.name %></h2>
+            </div>
+            <div class="col-sm-7">
+              <h3 class="taskLoc"><%= task.location %></h3>
+            </div>
+        </div>
+        <div class="panel-footer buttons">
+          <%= link_to "Edit", edit_user_task_path(@user, task), :method => :get, class: "btn btn-warning editDelete" %><%= link_to "Delete", user_task_path(@user, task), :method => :delete, class: "btn btn-danger editDelete" %>
+        </div>
+        <hr>
+        <% end %>
+    </div>
   </div>
-</div>
+  <% else %>
+    <h1> You are not authorized to view this page </h1>
+  <% end %>
