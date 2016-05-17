@@ -17,13 +17,10 @@ class SessionsController < ApplicationController
      end
    end
 
-   def destroy    #destroy user login
-     logout   #see in sessions helper
-     flash[:notice] = "Successfully logged out."
-     redirect_to home_path
-   end
-   def testing
-      1+2
-   end
+  def destroy    #destroy user login
+    logout   #see in sessions helper
+    flash[:notice] = "successfully logged out."
+    redirect_to home_path
+  end
 
 end
