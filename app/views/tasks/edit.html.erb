@@ -1,0 +1,9 @@
+<br>
+<h1>LETS EDIT SOME SHIT!</h1>
+<div class="container pad-down">
+    <%= simple_form_for :task, url: user_tasks_path(@user), method: "post" do |f| %>
+    <%= f.input :name, placeholder: 'example: pick up the kids' %>
+    <%= f.input :location, inline_label: 'Enter Valid Address' %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
