@@ -73,6 +73,10 @@
 .newGo{
   width: 50%;
 }
+.denied{
+  text-align: center;
+  margin-top: 10%;
+}
 @media (max-width: 990px) {
   .userInfo{
     text-align: center;
