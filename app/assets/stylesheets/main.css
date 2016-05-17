@@ -50,8 +50,11 @@
 }
 .flash{
   padding-top: 55px;
+  position: fixed;
+  z-index: 999;
   width: 33%;
   margin: 0 auto;
+  margin-left: 33%;
 }
 .newTask{
   float: right;
