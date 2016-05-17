@@ -24971,3 +24971,38 @@ Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.4ms)
 =======
 >>>>>>> origin/style_branch
 >>>>>>> bdeeec1774a6e22c8cfde76ddde43658ae9c8753
+
+
+Started GET "/" for ::1 at 2016-05-17 15:48:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 323ms (Views: 299.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap.min.self-088b177ea252d82467e80a53c5ff67a13ddf419f95c5eaf48b882ae91e826ec2.css?body=1" for ::1 at 2016-05-17 15:48:03 -0700
+
+
+Started GET "/assets/main.self-28bcc8653b4379e281e8af984067d032b6e5f032e4055c266fd5a0532e630e85.css?body=1" for ::1 at 2016-05-17 15:48:03 -0700
+
+
+Started GET "/assets/application.self-f024a25089e758ab89abef4161f50dc11e05168e0385b4ff9e30caf995c362ff.css?body=1" for ::1 at 2016-05-17 15:48:03 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-17 15:48:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-17 15:48:03 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-17 15:48:03 -0700
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-05-17 15:48:03 -0700
+
+
+Started GET "/assets/application.self-da8fe1ed250c12d2f71bd06704981682be4d79430b62091bc3bb0a914b9c7dcc.js?body=1" for ::1 at 2016-05-17 15:48:03 -0700
