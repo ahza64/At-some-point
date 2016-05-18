@@ -6,15 +6,15 @@ class SessionsController < ApplicationController
     if @user
       login(@user)
       redirect_to @user
-      flash[:notice] = "You did it! You logged in!"
     else
+      flash[:error] = "No user found!"
       redirect_to home_path
     end
   end
 
   def destroy    #destroy user login
     logout   #see in sessions helper
-    flash[:notice] = "successfully logged out."
+    flash[:notice] = "Successfully logged out."
     redirect_to home_path
   end
   def testing
