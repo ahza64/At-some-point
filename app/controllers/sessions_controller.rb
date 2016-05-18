@@ -17,5 +17,8 @@ class SessionsController < ApplicationController
     flash[:notice] = "successfully logged out."
     redirect_to home_path
   end
+  def testing
+     1+2
+  end
 
 end

@@ -36,5 +36,9 @@
     </div>
   </div>
   <% else %>
-    <h1 class="denied"> <%= current_user.username %> is not authorized to view this page. </h1>
+   <% if current_user %>
+      <h1 class="denied"> <%= current_user.username %> is not authorized to view this page. </h1>
+   <% else %>
+      <h1 class="denied"> You are not authorized to view this page. </h1>
+   <% end %>
   <% end %>
