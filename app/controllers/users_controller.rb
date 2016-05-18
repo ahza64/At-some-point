@@ -7,6 +7,9 @@ class UsersController < ApplicationController
 
    def create
          @user = User.create(user_params)
+         if @user.image == ""
+            @user.image = "https://lh3.googleusercontent.com/-NIp5BzqFqNE/AAAAAAAAAAI/AAAAAAAAAAA/CapeXh7GWeI/photo.jpg (19KB)"
+        end
       if @user.save
          login(@user)
          redirect_to user_path(@user)
@@ -15,11 +18,16 @@ class UsersController < ApplicationController
       end
    end
 
-  def show
-    @user = User.find_by_id(params[:id])
-    @tasks = @user.tasks
-    render :show
-  end
+   def show
+      @user = User.find_by_id(params[:id])
+      @tasks = @user.tasks
+      if current_user == @user
+         render :show
+      else
+         redirect_to home_path
+      end
+
+   end
 
    private
 
