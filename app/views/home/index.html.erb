@@ -103,18 +103,21 @@
 
 <% else %>
 
-
-<div class="container">
-  <div class="row featurette whole-page">
-    <div class="col-md-5">
-      <img class="featurette-image img-responsive center-block" src="http://the1perspective.com/jonatron/cargif.gif" alt="Generic placeholder image">
-    </div>
-    <div class="col-md-7 feature-heading">
-      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      <%= link_to "Sign Up Today!", new_user_path, class: "btn btn-primary" %>
+<div class="container front-page">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <img class="featurette-image img-responsive center-block logo" src="http://the1perspective.com/jonatron/cargif.gif" alt="Generic placeholder image">
     </div>
   </div>
+  <div class="row">
+    <div class="class-md-10">
+      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+      <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    <%= link_to "Sign Up Today!", new_user_path, class: "btn btn-success" %>
+  </div>
 </div>
+
+
 
 <% end %>

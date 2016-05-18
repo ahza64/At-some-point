@@ -146,3 +146,18 @@ body > .container {
 .feature-heading {
   text-align: center;
 }
+
+/*FRONT PAGE CUSTOM CSS*/
+.front-page {
+  text-align: center;
+}
+
+.logo {
+  padding-right: 25px;
+  width: 80%;
+}
+
+.logo-form {
+  padding-right: 15px;
+  width: 25%;
+}
