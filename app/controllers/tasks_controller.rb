@@ -7,7 +7,7 @@ class TasksController < ApplicationController
       render :new
     else
       flash[:error] = "Could not create task"
-      redirect_to home_path #change to login page when we make it see jon
+      redirect_to home_path
     end
   end
 
@@ -26,7 +26,7 @@ class TasksController < ApplicationController
       render :edit
     else
    flash[:error] = "Must log in to edit!"
-      redirect_to home_path #update to login see Jon
+      redirect_to home_path
     end
   end
 

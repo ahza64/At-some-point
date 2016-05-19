@@ -12,8 +12,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy    #destroy user login
-    logout   #see in sessions helper
+  def destroy
+    logout  
     flash[:notice] = "Successfully logged out."
     redirect_to home_path
   end
