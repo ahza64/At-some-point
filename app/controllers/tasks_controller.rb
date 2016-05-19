@@ -6,8 +6,7 @@ class TasksController < ApplicationController
     if current_user
       render :new
     else
-      #flash see john
-
+      flash[:error] = "Could not create task"
       redirect_to home_path #change to login page when we make it see jon
     end
   end
@@ -16,7 +15,7 @@ class TasksController < ApplicationController
     @task = Task.create(task_params)
     @user = current_user
     @user.tasks << @task
-
+    flash[:success] = "Task created!"
     redirect_to user_path(@user)
   end
 
@@ -26,7 +25,7 @@ class TasksController < ApplicationController
     if current_user == @user
       render :edit
     else
-      # flash see john
+   flash[:error] = "Must log in to edit!"
       redirect_to home_path #update to login see Jon
     end
   end
@@ -35,7 +34,7 @@ class TasksController < ApplicationController
     @user = User.find(params[:user_id])
     @task = Task.find(params[:id])
     @task.update(task_params)
-    #flash see john
+    flash[:success] = "Task update complete!"
     redirect_to @user
   end
 
@@ -44,10 +43,10 @@ class TasksController < ApplicationController
     @user = @task.user
     if current_user == @user
       @user.tasks.destroy(@task)
-      #flash see john
+      flash[:success] = "Task deleted!"
       redirect_to @user
     else
-      #flash see john
+      flash[:error] = "Must log in to delete task"
       redirect_to home_path
     end
   end

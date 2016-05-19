@@ -49,15 +49,21 @@
       </div><!--/.navbar-collapse -->
     </div>
   </nav>
-  <div id="flashMsg">
-    <% flash.each do |name, msg| %>
-    <div class="alert alert-dismissible alert-info flash">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <span class="sr-only">Oh snap!</span>
-      <%= msg %>
-    </div>
-    <% end %>
+  <% flash.each do |name, msg| %>
+  <div class="alert alert-dismissible alert-info flash" id="flash">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <span class="sr-only">Oh snap!</span>
+    <%= msg %>
   </div>
+  <script type="text/javascript">
+  $(document).ready(function(){
+     setTimeout(function(){
+        $('#flash').remove();
+     }, 3000);
+  })
+  </script>
+  <% end %>
+
 
   <!-- Begin page content -->
   <%= yield %>
