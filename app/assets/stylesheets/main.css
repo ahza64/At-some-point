@@ -102,7 +102,7 @@ body {
 }
 
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -158,6 +158,27 @@ html.turbolinks-progress-bar::before {
   height: 6px !important;
 }
 
+.btn-push {
+  margin-top: -30px;
+}
+
+.aboutlabel:hover {
+  color: black;
+}
+
+footer .btn-push {
+  float: right;
+  padding: 5px;
+}
+
+.btn-push {
+  transition: all .2s ease-in-out;
+    margin-bottom: 10px;
+}
+.btn-push:hover {
+  transform: scale(1.1);
+}
+
 
 
 
@@ -180,7 +201,7 @@ body > .container {
 .feature-heading {
   text-align: center;
 }
-<<<<<<< HEAD
+
 
 /*FRONT PAGE CUSTOM CSS*/
 .front-page {
@@ -188,8 +209,9 @@ body > .container {
 }
 
 .logo {
-  padding-right: 8%;
-  width: 80%;
+  padding-top: 5%;
+  padding-right: 6%;
+  max-width: 75%;
 }
 
 .logo-form {
@@ -197,36 +219,51 @@ body > .container {
   width: 35%;
 }
 
-@media (max-width: 991px) {
-  .logo-form {
-    width: 30%;
-  }
-}
 
 @media (max-width: 767px) {
   .logo-form {
     width: 30%;
   }
 }
+@media (max-width: 991px) {
+  .logo-form {
+    width: 30%;
+  }
+}
+
 
 .head{
   text-align: center;
+  margin-bottom: 45px;
+  color: #000;
 }
 .aboutUsPic{
-  width: 75%;
+  max-width: 75%;
+  max-height: 55%;
   border: 5px solid black;
   border-radius: 25px;
-  margin-left: 13%
+  margin-left: 13%;
 }
 .bio{
   text-align: center;
+  font-size: .8em;
+  padding: 10px;
+  color: #000;
 }
 .name{
   text-align: center;
+  color: #000;
 }
 .aboutApp{
   text-align: center;
+  padding: 10px;
+  font-size: .8em;
+  color: #000;
 }
 .sponsors{
-  width: 25%;
+  max-width: 23%;
+}
+
+.lead {
+  padding: 15px;
 }

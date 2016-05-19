@@ -68,9 +68,10 @@
   <!-- Begin page content -->
   <%= yield %>
 
-  <footer class="footer">
+  <footer class="footer about-foot">
     <div class="container">
-      <p class="text-muted">2016 @Somepoint All Rights Reserved</p>
+      <h6>2016 @somepoint all rights reserved</h6>
+      <%= button_to "-About-", about_path, method: "get", class:"btn btn-xs btn-success btn-push" %>
     </div>
   </footer>
 
