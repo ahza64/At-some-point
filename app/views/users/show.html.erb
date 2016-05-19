@@ -1,44 +1,63 @@
 <% if @user == current_user %>
-  <div class="container pad-down">
-    <div class="row">
-      <br>
-      <div class="col-md-2 col-md-offset-3">
-        <%= image_tag current_user.image, class: "profilePic img-responsive fix-img thumbnail" %>
-      </div>
-      <div class="col-md-3">
-        <h1 class="userInfo"><%= @user.username %></h1>
-        <h2 class="userInfo"><%= @user.email %></h2>
-        <p class="userInfo">Joined On: <%= @user.created_at.strftime("%b %d, %Y") %></p>
-        <hr>
-        <hr>
-      </div>
-
-    </div>
-    <div class="tasksShow">
-      <div class="row">
-        <%= link_to "GO!", "/", class: "btn btn-success newTask goBtn" %>
-        <%= link_to "New Task", new_user_task_path(@user), class: "btn btn-info newTask taskBtn" %>
-      </div>
-        <% @tasks.each do |task|  %>
-        <div class="row panel-body">
-            <div class="col-sm-5">
-              <h2 class="taskName"><%= task.name %></h2>
-            </div>
-            <div class="col-sm-7">
-              <h3 class="taskLoc"><%= task.location %></h3>
-            </div>
-        </div>
-        <div class="panel-footer buttons">
-          <%= link_to "Edit", edit_user_task_path(@user, task), :method => :get, class: "btn btn-warning editDelete" %><%= link_to "Delete", user_task_path(@user, task), :method => :delete, class: "btn btn-danger editDelete" %>
-        </div>
-        <hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-2">
+    <div class="thumbnail">
+      <%= image_tag current_user.image, class: "img-center img-responsive fix-img profile-img" %>
+      <div class="caption">
+        <p><%= @user.email %></p>
+        <p>Joined On: <%= @user.created_at.strftime("%b %d, %Y") %></p>
+        <% if @user.tasks.count >= 1 %>
+        <%= link_to "GO!", "/", class: "btn btn-success btn-block btn-md" %>
         <% end %>
+        <%= link_to "New Task", new_user_task_path(@user), class: "btn btn-info btn-block btn-md" %>
+      </div>
     </div>
   </div>
-  <% else %>
-   <% if current_user %>
-      <h1 class="denied"> <%= current_user.username %> is not authorized to view this page. </h1>
-   <% else %>
-      <h1 class="denied"> You are not authorized to view this page. </h1>
-   <% end %>
-  <% end %>
+</div>
+
+
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-2">
+      <table class="table table-hover">
+        <% if @user.tasks.length > 0 %>
+        <tr id="table-head">
+          <th>Todo: </th>
+        </tr>
+        <% end %>
+        <% @tasks.each do |task| %>
+        <tbody class="tasks">
+          <tr id="singleTask">
+            <td><%= task.name %></td>
+            <td><%= task.location %></td>
+            <td>
+              <%= link_to "Edit", edit_user_task_path(@user, task), :method => :get, class: "btn btn-warning btn-block btn-xs" %>
+            </td>
+            <td>
+              <%= button_to "Delete", user_task_path(@user, task), remote: true, method: 'delete', class: "btn btn-danger delete-button btn-block btn-xs" %>
+            </td>
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+
+
+
+  </div>
+  <% elsif %>
+  <div class="container">
+    <% if !current_user == current_user %>
+    <%= current_user.username %> is not authorized to view this page.
+
+    <% end %>
+  </div>
+  <div class="container">
+    <% else %>You are not authorized to view this page.
+
+  </div>
+
+
+<% end %>

@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'http://the1perspective.com/jonatron/somepoint.ico' %>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -17,7 +18,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <div class="navbar-brand"><%= link_to "@Somepoint", "/" %></div>
+        <div class="navbar-brand">
+          <%= link_to image_tag("http://the1perspective.com/jonatron/brand.png"), home_path, class:"img-brand" %>
+        </div>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <% if current_user %>
@@ -46,13 +49,15 @@
       </div><!--/.navbar-collapse -->
     </div>
   </nav>
-  <% flash.each do |name, msg| %>
-  <div class="alert alert-dismissible alert-info flash">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <span class="sr-only">Oh snap!</span>
-    <%= msg %>
+  <div id="flashMsg">
+    <% flash.each do |name, msg| %>
+    <div class="alert alert-dismissible alert-info flash">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <span class="sr-only">Oh snap!</span>
+      <%= msg %>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 
   <!-- Begin page content -->
   <%= yield %>

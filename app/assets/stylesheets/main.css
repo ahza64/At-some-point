@@ -88,12 +88,7 @@
     float: left;
   }
 }
-@media (max-width: 767px) {
 
-  .taskLoc{
-    text-align: left;
-  }
-}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -112,7 +107,7 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #4E5D6C;
+  /*background-color: #4E5D6C;*/
 }
 
 .text-muted {
@@ -127,6 +122,45 @@ body {
   min-height: 100%;
   margin-top: 3%;
 }
+
+.profile-img {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: 2px;
+}
+
+.caption p {
+  text-align: center;
+}
+
+.table {
+  text-transform: capitalize;
+}
+
+.navbar {
+  padding: 5px;
+}
+
+.navbar img {
+  width: 25px;
+  margin-top: -6px;
+}
+
+.div .navbar-brand {
+  margin-top: 0;
+}
+
+html.turbolinks-progress-bar::before {
+  background-color: #2ecc71 !important;
+  height: 6px !important;
+}
+
+
+
+
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -153,11 +187,23 @@ body > .container {
 }
 
 .logo {
-  padding-right: 25px;
+  padding-right: 8%;
   width: 80%;
 }
 
 .logo-form {
   padding-right: 15px;
-  width: 25%;
+  width: 35%;
+}
+
+@media (max-width: 991px) {
+  .logo-form {
+    width: 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo-form {
+    width: 30%;
+  }
 }
