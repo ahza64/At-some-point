@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.image == ""
-      @user.image = "https://lh3.googleusercontent.com/-NIp5BzqFqNE/AAAAAAAAAAI/AAAAAAAAAAA/CapeXh7GWeI/photo.jpg (19KB)"
+      @user.image = "photo.jpg"
     end
     if @user.save
       login(@user)
