@@ -65766,3 +65766,33 @@ Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde45
 
 
 Started GET "/assets/application.self-0111ab29144b20a4e7ebfef5b45d23513d41b9ba4c6259279951ca2c76c3038d.js?body=1" for ::1 at 2016-06-18 13:47:17 -0700
+
+
+Started POST "/sessions" for ::1 at 2016-06-18 13:56:37 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RQkRl5HYwo4NyYicyz0rQQ/9I4h0V200+tCNUTrsOqS6CEGC68GBchWrh6G6uOlZNSNehUdQBHXB7Ebh+T3HeQ==", "user"=>{"email"=>"Sample@login.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "Sample@login.com"]]
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 82ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4" for ::1 at 2016-06-18 13:56:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 4]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 153ms (Views: 143.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/4" for ::1 at 2016-06-18 13:56:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."user_id" = $1  [["user_id", 4]]
+  [1m[36mTask Load (0.7ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = $1[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 1.4ms)
