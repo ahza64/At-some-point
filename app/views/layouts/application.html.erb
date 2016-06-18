@@ -2,12 +2,14 @@
 <html>
 <head>
   <title>AtSomePoint</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'http://the1perspective.com/jonatron/somepoint.ico' %>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -16,21 +18,64 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">@SomePoint</a>
+        <div class="navbar-brand">
+          <%= link_to image_tag("http://the1perspective.com/jonatron/brand.png"), home_path, class:"img-brand" %>
+        </div>
       </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
+      <div id="navbar" class="navbar-collapse collapse">
+        <% if current_user %>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "Profile", user_path(current_user) %></li>
+            <li><%= link_to "Log Out", logout_path %></li>
+          </ul>
+        <% else %>
+          <%= form_for :user, url: "/sessions", method: "post", :html => {:class => "navbar-form navbar-right"} do |f| %>
+            <div class="form-group">
+              Email:
+              <%= f.text_field :email, value: "Sample@login.com", class: "form-control" %>
+            </div>
+            <div class="form-group">
+              Password:
+              <%= f.password_field :password, value: "aaaaaaaa", class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.submit "Log In", class: "btn btn-success" %>
+            </div>
+          <% end %>
+        <% end %>
+        <% if current_user %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><div class="navbar-brand logged">Logged in as: <%= current_user.username %></div></li>
+          </ul>
+        <% end %>
+      </div><!--/.navbar-collapse -->
     </div>
   </nav>
-  <div class="container">
-    <%= yield %>
-  </div>
+  <% flash.each do |name, msg| %>
+    <div class="alert alert-dismissible alert-info flash" id="flash">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <span class="sr-only">Oh snap!</span>
+      <%= msg %>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      setTimeout(function(){
+        $('#flash').remove();
+      }, 3000);
+    })
+    </script>
+  <% end %>
 
+
+  <!-- Begin page content -->
+  <%= yield %>
+
+  <footer class="footer about-foot">
+    <div class="container">
+      <h6>2016 @somepoint all rights reserved</h6>
+      <%= button_to "-About-", about_path, method: "get", class:"btn btn-xs btn-success btn-push" %>
+    </div>
+  </footer>
 
 </body>
 </html>

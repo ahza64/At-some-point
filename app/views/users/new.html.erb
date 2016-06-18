@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+      <img class="featurette-image img-responsive center-block logo-form" src="http://the1perspective.com/jonatron/cargif.gif" alt="Generic placeholder image">
+      <%= simple_form_for @user do |f| %>
+      <%= f.input :username, label: 'Username' %>
+      <%= f.input :email, placeholer: 'user@domain.com' %>
+      <%= f.input :image, placeholder: 'image/url' %>
+      <%= f.input :location %>
+      <%= f.input :password, hint: 'Password Must Be > 7 characters' %>
+      <%= f.button :submit, class: 'btn btn-warning btn-block btn-md' %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<% if @user == current_user %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-xs-6 col-xs-offset-3">
+      <img class="featurette-image img-responsive center-block logo-form" src="http://the1perspective.com/jonatron/cargif.gif" alt="Generic placeholder image">
+      <%= simple_form_for :task, url: user_tasks_path(@user), method: "post" do |f| %>
+      <%= f.input :name, required: true, placeholder: 'example: pick up the kids' %>
+      <%= f.input :location, required: true, inline_label: 'Enter Valid Address' %>
+      <%= f.button :submit, class: "btn btn-info btn-block" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% else %>
+<h1 class="denied"> <%= current_user.username %> is not authorized to view this page. </h1>
+<% end %>
